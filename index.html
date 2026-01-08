@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <title>프리젠테이션 웹폰트</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="freesentation.css" rel="stylesheet">
-  <style>
-    html, body{margin:0;padding:0;height:100%}
-    body{background-color:#263238;font:1.2em/1.3em 'Freesentation', sans-serif;color:#ECEFF1}
-    body > div{display:table;width:100%;height:100%}
-    body > div > div{display:table-cell;vertical-align:middle}
-    p{text-align:center}
-    p strong.extra{font-weight: 800}
-    p.light{font-weight: 300}
-    .ac{margin-top:-1em;font-family: 'Freesentation', sans-serif !important}
-</style>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freesentation 폰트 테스트</title>
+    <style>
+        /* 앞서 만든 CSS 코드를 그대로 넣습니다 */
+        @font-face {
+            font-family: 'Freesentation';
+            src: url('https://cdn.jsdelivr.net/gh/hongsigner/freesentation@main/Freesentation-4Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Freesentation';
+            src: url('https://cdn.jsdelivr.net/gh/hongsigner/freesentation@main/Freesentation-7Bold.ttf') format('truetype');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Freesentation';
+            src: url('https://cdn.jsdelivr.net/gh/hongsigner/freesentation@main/Freesentation-1Thin.ttf') format('truetype');
+            font-weight: 100;
+        }
 
+        body {
+            font-family: 'Freesentation', sans-serif;
+            line-height: 1.6;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .test-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-weight: 700; color: #333; }
+        p { font-weight: 400; color: #666; font-size: 1.2rem; }
+        .thin { font-weight: 100; color: #999; }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            font-family: 'Freesentation';
+            font-size: 1.5rem;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
 <body>
 
-  <div>
-    <div>
-      <p>기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</p>
-      <p class="ac">기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</p>
-      <p><strong>기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</strong></p>
-      <p class="ac"><strong>기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</strong></p>
-      <p><strong class="extra">기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</strong></p>
-      <p class="ac"><strong class="extra">기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</strong></p>
-      <p class="light">기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</p>
-      <p class="ac light">기회는 일어나는 것이 아니라 만들어내는 것이다. (벭)</p>
+    <div class="test-box">
+        <h1 contenteditable="true">Freesentation Bold (700) - 제목을 수정해보세요</h1>
+        <p contenteditable="true">Freesentation Regular (400) - 본문 텍스트입니다. 이 영역의 글자를 지우고 타이핑해볼 수 있습니다.</p>
+        <p class="thin" contenteditable="true">Freesentation Thin (100) - 아주 얇은 폰트 스타일입니다.</p>
+        
+        <hr>
+        <h3>직접 입력 테스트:</h3>
+        <textarea placeholder="여기에 글자를 입력하여 폰트를 확인하세요."></textarea>
     </div>
-  </div>
 
 </body>
-
 </html>
